@@ -1,0 +1,126 @@
+.container {
+    max-width: 540px;
+    margin: 4rem auto;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    h1 {
+        color: var(--white);
+    }
+}
+
+.containerHead {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    svg {
+        color: var(--green-700);
+    }
+}
+
+.table {
+    overflow-y: scroll;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    background-color: var(--dark-900);
+    padding-left: 0.3rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+
+    table {
+        thead {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        thead:before {
+            content: "@";
+            display: block;
+            line-height: 1rem;
+            text-indent: -99999px;
+        }
+
+        tbody {
+            color: var(--gray-100);
+            font-size: 1.1rem;
+        }
+
+        tbody:before {
+            content: "@";
+            display: block;
+            line-height: 1rem;
+            text-indent: -99999px;
+        }
+    }
+}
+
+.headNumber {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+}
+
+.tdNumber {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    word-break: break-all;
+    width: 100px;
+    justify-content: center;
+
+    span {
+        padding: 0.5rem 0;
+        color: var(--gray-100);
+    }
+}
+
+.tdAcao {
+    text-align: center;
+    padding: 1rem;
+}
+
+.button {
+    background: transparent;
+    border: 0;
+    padding: 1rem 0 0 0.5rem;
+    margin-right: 1rem;
+}
+
+.total {
+    color: var(--white);
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.emptyList {
+    padding-top: 3rem;
+    font-size: 1.2rem;
+    color: var(--gray-100);
+}
+
+@media (max-width: 720px) {
+    .nameHeader {
+        width: 485px;
+    }
+}
+
+@media (max-width: 633px) {
+    .nameHeader {
+        width: 470px;
+    }
+}
+
+@media (max-width: 620px) {
+    .nameHeader {
+        width: 240px;
+    }
+}

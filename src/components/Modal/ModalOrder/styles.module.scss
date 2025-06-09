@@ -1,0 +1,59 @@
+.container {
+    width: 600px;
+    background-color: var(--dark-700);
+    color: var(--white);
+
+    h1 {
+        margin: 1rem 0 3rem 0rem;
+        color: var(--white);
+    }
+}
+
+.containerItem {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+    strong {
+        color: var(--green-700);
+    }
+}
+
+.description {
+    margin-top: 0.5rem;
+    //Se chegar a descrição no final do modal, quero que quebra para a linha de baixo.
+    word-break: break-all;
+}
+
+.table {
+    font-size: 1.3rem;
+    color: var(--green-700);
+}
+
+.buttonConcluirOrder {
+    margin-top: 1.5rem;
+    background-color: var(--red-900);
+    color: var(--white);
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    height: 40px;
+    font-size: 1.2rem;
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(1.25);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 300px;
+    }
+}

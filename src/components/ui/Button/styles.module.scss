@@ -1,0 +1,82 @@
+.buttonRed {
+    max-width: 600px;
+    background-color: var(--red-900);
+    border: 0;
+    padding: 0.4rem;
+    color: var(--white);
+    border-radius: 0.5rem;
+    transition: filter 0.2s;
+    height: 40px;
+    font-size: 1.2rem;
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        svg {
+            animation: animate 2s infinite;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.25);
+    }
+}
+
+.buttonGreen {
+    max-width: 600px;
+    background-color: var(--green-700);
+    border: 0;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    transition: filter 0.2s;
+    height: 40px;
+    font-size: 1.2rem;
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        svg {
+            animation: animate 2s infinite;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.25);
+    }
+}
+
+.buttonRefresh {
+    background: transparent;
+    border: 0;
+    margin-left: 1rem;
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        svg {
+            animation: animate 2s infinite;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.25);
+    }
+}
+
+.buttonTextWhite {
+    color: var(--white);
+}
+
+.buttonTextBlack {
+    color: var(--black);
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

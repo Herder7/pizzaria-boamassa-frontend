@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.vscode
+*.log
+coverage
+build
+README.md
+buildspec.yml
+tsconfig.json
+yarn.lock

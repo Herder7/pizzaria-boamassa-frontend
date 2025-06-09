@@ -1,0 +1,87 @@
+.toggleSwitchDisable{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .toggleSwitchDisable input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggleSwitchDisable .switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--red-900);
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .toggleSwitchDisable .switch::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--red-700);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .toggleSwitchDisable input[type="checkbox"]:checked + .switch::before {
+    transform: translateX(25px);
+    background-color: var(--green-900);
+  }
+
+  .toggleSwitchDisable input[type="checkbox"]:checked + .switch {
+    background-color: var(--green-700);
+  }
+
+  .toggleSwitch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .toggleSwitch input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggleSwitch .switch {
+    position: absolute;
+    cursor: not-allowed;
+    background-color: var(--red-900);
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .toggleSwitch .switch::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--red-700);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .toggleSwitch input[type="checkbox"]:checked + .switch::before {
+    transform: translateX(25px);
+    background-color: var(--green-900);
+  }
+
+  .toggleSwitch input[type="checkbox"]:checked + .switch {
+    background-color: var(--green-700);
+  }

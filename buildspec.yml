@@ -1,0 +1,26 @@
+version: 0.2
+
+env:
+  variables:
+    IMAGE_TAG: latest
+
+phases:
+  pre_build:
+    commands:
+      - echo "Fazendo login no Docker Hub..."
+      - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+  build:
+    commands:
+      - echo "Construindo a imagem Docker..."
+      - echo "Adicionando variavel NEXT_PUBLIC_API_URL=$API_URL..."
+      - echo "Realizando build da imagem $IMAGE_NAME_MASTER"
+      - docker build --build-arg NEXT_PUBLIC_API_URL=$API_URL -t $IMAGE_NAME_MASTER:$IMAGE_TAG .
+  post_build:
+    commands:
+      - echo "Fazendo push da imagem para o Docker Hub..."
+      - docker push $IMAGE_NAME_MASTER:$IMAGE_TAG
+      - echo "Build e push concluídos com sucesso!"
+
+artifacts:
+  files:
+    - Dockerrun.aws.json

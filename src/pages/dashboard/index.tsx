@@ -141,6 +141,13 @@ export default function Dashboard({ orders }: HomeProps) {
                                 size={25} />
                         </ButtonRefresh>
                     </div>
+                    <button
+                            title="Cadastrar Pedido"
+                            className={styles.button}>
+                            <Link href="/order" legacyBehavior>
+                                <a><FiPlus size={50} /></a>
+                            </Link>
+                    </button>
                     <article className={styles.listOreders}>
                         {
                             orderList.length === 0 && (
